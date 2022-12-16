@@ -21,9 +21,37 @@ div.row {
     display: flex;
     width: 100vw;
 }
-div#i-have {
+div#i-have, div#i-want {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    padding: 0 70px;
     width: 50vw;
+    height: 70vh;
+    font-size: 40px;
 }
-div#i-want {
-    width: 50vw;
+div#currency-list {
+    border: 1px solid #fff;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+h3 {
+    font-size: 65px;
+    font-weight: 500;
+}
+p {
+    color: rgb(133, 133, 133);
+}
+input[type="submit"]{
+    padding: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+input[type="text"]{
+    padding: 50px;
+    font-size: 50px;
+    margin-top: 160px;
 }

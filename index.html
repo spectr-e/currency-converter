@@ -16,13 +16,15 @@
   </head>
   <body>
     <section id="main">
+        <h1>Currency Converter</h1>
       <div id="converter" class="container">
         <form action="">
           <div class="row">
+            <!-- PART 1 : USER INPUT -->
             <div id="i-have">
               <h3 class="title">I have</h3>
               <p class="rates">1 GBP = 4.9232 PLN</p>
-              <div class="currency-list">
+              <div id="currency-list">
                 <img src="https://www.countryflagicons.com/FLAT/32/DE.png" alt="" id="flag" />
                 <select class="currency">
                     <option value="USD">USD</option>
@@ -34,6 +36,7 @@
               </div>
               <input type="text" placeholder="£" />
             </div>
+            <!-- PART 2: CONVERTED OUTPUT -->
             <div id="i-want">
               <h3 class="title">I want</h3>
               <p class="rates">1 GBP = 4.9232 PLN</p>
