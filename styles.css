@@ -15,14 +15,7 @@ section#main {
     flex-direction: column;
     justify-content: center;
     align-items: space-between;
-}
-div#chart {
-    display: flex;
-    justify-content: center;
-    height: 30%;
-}
-div#chart img {
-    height: 500px;
+    height: 100vh;
 }
 div.row {
     display: flex;
