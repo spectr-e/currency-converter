@@ -25,10 +25,12 @@ div#i-have, div#i-want {
     display: flex;
     flex-direction: column;
     border: 1px solid #fff;
-    padding: 0 70px;
+    margin: 0 30px;
+    padding: 0 30px;
     width: 50vw;
     height: 70vh;
     font-size: 40px;
+    border-radius: 10px;
 }
 div#currency-list {
     border: 1px solid #fff;
