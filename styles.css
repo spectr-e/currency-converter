@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 body {
-    background: #05152e;
+    background: #191D1E;
     color: #fff;
 }
 section#main {
@@ -29,23 +29,20 @@ div.row {
 }
 div#i-have {
     display: flex;
+    background: #2D2F2F;
     flex-direction: column;
-    border: 1px solid gray;
-    /* margin: 0 30px; */
     padding: 32px 48px;
     width: 48vw;
     height: 70vh;
     font-size: 40px;
-    border-radius: 10px;
 }
 div#i-want {
     display: flex;
-    border: 1px solid gray;
+    background: #222627;
     padding: 32px 48px;
     width: 52vw;
     height: 70vh;
     font-size: 40px;
-    border-radius: 10px;
 }
 div.wrapper {
     display: flex;
@@ -73,7 +70,7 @@ div.currency-list select option {
     background-color: #05152e;
 }
 h1 {
-    font-size: 50px;
+    font-size: 80px;
     text-align: center;
     margin-bottom: 100px;
 }
