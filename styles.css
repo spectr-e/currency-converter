@@ -1,98 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 body {
-    background: #191D1E;
-    color: #fff;
+  background: #191d1e;
+  color: #fff;
 }
 section#main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: space-between;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  height: 100vh;
 }
 div.row {
-    display: flex;
-    /* justify-content: flex-start; */
-    width: 100vw;
-}
-.icon{
-    display: flex;
-    align-items: center;
-    font-size: 150px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }
 div#i-have {
-    display: flex;
-    background: #2D2F2F;
-    flex-direction: column;
-    padding: 32px 48px;
-    width: 48vw;
-    height: 70vh;
-    font-size: 40px;
+  display: flex;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  background: #2d2f2f;
+  flex-direction: column;
+  padding: 32px 48px;
+  width: 40vw;
+  height: 60vh;
+  font-size: 40px;
 }
 div#i-want {
-    display: flex;
-    background: #222627;
-    padding: 32px 48px;
-    width: 52vw;
-    height: 70vh;
-    font-size: 40px;
+  display: flex;
+  background: #222627;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 32px 48px;
+  width: 44vw;
+  height: 60vh;
+  font-size: 40px;
 }
 div.wrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 div.currency-list {
-    display: flex;
-    width: 480px;
-    margin-top: 48px;
-    padding: 24px;
-    border: 4px solid gray;
-    border-radius: 8px;
+  display: flex;
+  width: 400px;
+  margin-top: 48px;
+  padding: 16px;
+  border: 4px solid gray;
+  border-radius: 8px;
 }
-div.currency-list img{
-    margin-right: 24px;
+div.currency-list img {
+  margin-right: 24px;
 }
 div.currency-list select {
-    font-size: 48px;
-    width: 480px;
-    background: none;
-    border: none;
-    color: #fff;
+  font-size: 48px;
+  width: 400px;
+  background: none;
+  border: none;
+  color: #fff;
+}
+div.currency-list select:hover {
+    cursor: pointer;
 }
 div.currency-list select option {
-    background-color: #05152e;
+  background-color: #191d1e;
+  color: #fff;
 }
 h1 {
-    font-size: 80px;
-    text-align: center;
-    margin-bottom: 100px;
+  font-size: 80px;
+  text-align: center;
+  margin: 80px 0;
+  color: rgba(255, 255, 255, 0.774);
+}
+span.color{
+    color: #011affd7;
+
 }
 h3 {
-    font-size: 65px;
-    font-weight: 500;
+  font-size: 65px;
+  font-weight: 500;
 }
 p {
-    color: rgb(133, 133, 133);
+  color: rgb(133, 133, 133);
 }
 div#submit {
-    display: flex;
-
-    margin: 160px 80px 160px 64px;
-
+  display: flex;
+  margin: 160px 80px 160px 64px;
 }
-input[type="submit"]{
-    padding: 50px;
-    border-radius: 32px;
+input[type="submit"] {
+  padding: 50px;
+  border-radius: 32px;
+  font-size: 20px;
+  font-weight: 500;
+  background: #011bff;
+  border: none;
+  color: #fff;
 }
-input[type="text"]{
-    padding: 50px;
-    font-size: 50px;
-    margin: 100px 0 120px 0;
+input[type="submit"]:hover {
+    cursor: pointer;
+    background: #222627;
+    border: 2px solid #011bff;
+}
+input[type="text"] {
+  padding: 8px 24px;
+  border-left: none;
+  border-right: none;
+  border-top: #fff;
+  background: none;
+  color: #fff;
+  font-size: 50px;
+  width: 640px;
+  margin: 80px 0 120px 0;
 }
