@@ -7,7 +7,8 @@
     box-sizing: border-box;
 }
 body {
-    background: ;
+    background: #05152e;
+    color: #fff;
 }
 section#main {
     display: flex;
@@ -15,6 +16,21 @@ section#main {
     justify-content: center;
     align-items: space-between;
 }
-.row {
+div#chart {
     display: flex;
+    justify-content: center;
+    height: 30%;
+}
+div#chart img {
+    height: 500px;
+}
+div.row {
+    display: flex;
+    width: 100vw;
+}
+div#i-have {
+    width: 50vw;
+}
+div#i-want {
+    width: 50vw;
 }
