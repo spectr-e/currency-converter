@@ -19,21 +19,51 @@ section#main {
 }
 div.row {
     display: flex;
+    /* justify-content: flex-start; */
     width: 100vw;
 }
-div#i-have, div#i-want {
+.icon{
+    display: flex;
+    align-items: center;
+    font-size: 150px;
+}
+div#i-have {
     display: flex;
     flex-direction: column;
-    border: 1px solid #fff;
-    margin: 0 30px;
-    padding: 0 30px;
-    width: 50vw;
+    border: 1px solid gray;
+    /* margin: 0 30px; */
+    padding: 32px 48px;
+    width: 48vw;
     height: 70vh;
     font-size: 40px;
     border-radius: 10px;
 }
-div#currency-list {
-    border: 1px solid #fff;
+div#i-want {
+    display: flex;
+    border: 1px solid gray;
+    padding: 32px 48px;
+    width: 52vw;
+    height: 70vh;
+    font-size: 40px;
+    border-radius: 10px;
+}
+div.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+div.currency-list {
+    display: flex;
+    width: 480px;
+    margin-top: 48px;
+    padding: 24px;
+    border: 1px solid gray;
+}
+div.currency-list img{
+    margin-right: 24px;
+}
+div.currency-list select {
+    font-size: 48px;
+    width: 480px;
 }
 h1 {
     font-size: 50px;
@@ -47,13 +77,18 @@ h3 {
 p {
     color: rgb(133, 133, 133);
 }
+div#submit {
+    display: flex;
+
+    margin: 160px 80px 160px 64px;
+
+}
 input[type="submit"]{
     padding: 50px;
-    margin-right: 50px;
-    border-radius: 10px;
+    border-radius: 32px;
 }
 input[type="text"]{
     padding: 50px;
     font-size: 50px;
-    margin-top: 160px;
+    margin: 100px 0 120px 0;
 }

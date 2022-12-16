@@ -17,15 +17,15 @@
   <body>
     <section id="main">
         <h1>Currency Converter</h1>
-      <div id="converter" class="container">
+      <div id="converter">
         <form action="">
           <div class="row">
             <!-- PART 1 : USER INPUT -->
             <div id="i-have">
               <h3 class="title">I have</h3>
               <p class="rates">1 GBP = 4.9232 PLN</p>
-              <div id="currency-list">
-                <img src="https://www.countryflagicons.com/FLAT/32/DE.png" alt="" id="flag" />
+              <div class="currency-list">
+                <img src="https://www.countryflagicons.com/FLAT/64/DE.png" alt="" id="flag" />
                 <select class="currency">
                     <option value="USD">USD</option>
                     <option value="NPR">NPR</option>
@@ -36,23 +36,29 @@
               </div>
               <input type="text" placeholder="£" />
             </div>
+            <!-- Exchange Icon -->
+            <!-- <div class="icon"><i class="fas fa-exchange-alt"></i></div> -->
             <!-- PART 2: CONVERTED OUTPUT -->
             <div id="i-want">
-              <h3 class="title">I want</h3>
-              <p class="rates">1 GBP = 4.9232 PLN</p>
-              <div id="currency-list">
-                <img src="https://www.countryflagicons.com/FLAT/32/DE.png" alt="" id="flag" />
-                <select class="currency">
-                    <option value="USD">USD</option>
-                    <option value="NPR">NPR</option>
-                    <option value="INR">INR</option>
-                    <option value="PKR">PKR</option>
-                    <option value="KES">KES</option>
-                </select>
+                <div class="wrapper">
+                    <h3 class="title">I want</h3>
+                    <p class="rates">1 GBP = 4.9232 PLN</p>
+                    <div class="currency-list">
+                      <img src="https://www.countryflagicons.com/FLAT/64/DE.png" alt="" id="flag" />
+                      <select class="currency">
+                          <option value="USD">USD</option>
+                          <option value="NPR">NPR</option>
+                          <option value="INR">INR</option>
+                          <option value="PKR">PKR</option>
+                          <option value="KES">KES</option>
+                      </select>
+                    </div>
+                    <input type="text" placeholder="£" />
+                </div>
+              <div id="submit">
+                  <input type="submit" />
               </div>
-              <input type="text" placeholder="£" />
             </div>
-            <input type="submit" />
           </div>
         </form>
       </div>
