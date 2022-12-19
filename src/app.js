@@ -1,8 +1,12 @@
 const rateFrom = document.querySelector("p#i-have-convert");
+const rateto = document.querySelector("p#i-want-convert");
 const inputCur = document.querySelector("select#i-have-opt");
 const inputVal = document.querySelector("input#i-have-amt");
 const outputCur = document.querySelector("select#i-want-opt");
 const outputVal = document.querySelector("input#i-want-amt");
+
+const currency = document.querySelectorAll("select");
+
 const requestURL = "https://api.exchangerate.host/latest";
 fetchFunc();
 function fetchFunc() {
@@ -12,18 +16,24 @@ function fetchFunc() {
 }
 function latestRates(data) {
   const rates = data.rates;
-  currList(rates);
+  currencySelect(rates);
 }
-function currList(rates) {
-    for (i in rates) {
-        const optHave = document.createElement("option");
-        optHave.value = i;
-        optHave.textContent = i;
-        const optWant = document.createElement("option");
-        optWant.value = i;
-        optWant.textContent = i;
-        inputCur.appendChild(optHave);
-        outputCur.appendChild(optWant);
-        
+function currencySelect(rates) {
+  for (i = 0; i < currency.length; i++) {
+    for (curr in rates) {
+      const option = document.createElement("option");
+      option.value = curr;
+      option.textContent = curr;
+      currency[i].appendChild(option)
     }
+  }
+  currency[0].addEventListener('change', ()=>{
+        displayRates(rates);
+  })
+}
+
+function displayRates(rates) {
+  const from = inputCur.value;
+  const to = outputCur.value;
+  rateFrom.textContent = `1 ${from} = ${rates[from].toFixed(2)} EUR`;
 }
