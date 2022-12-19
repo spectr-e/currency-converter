@@ -1,5 +1,5 @@
 const rateFrom = document.querySelector("p#i-have-convert");
-const rateto = document.querySelector("p#i-want-convert");
+const rateTo = document.querySelector("p#i-want-convert");
 const inputCur = document.querySelector("select#i-have-opt");
 const inputVal = document.querySelector("input#i-have-amt");
 const outputCur = document.querySelector("select#i-want-opt");
@@ -26,14 +26,17 @@ function currencySelect(rates) {
       option.textContent = curr;
       currency[i].appendChild(option)
     }
+    currency[i].addEventListener('change', ()=>{
+          displayRates(rates);
+    })
   }
-  currency[0].addEventListener('change', ()=>{
-        displayRates(rates);
-  })
 }
 
 function displayRates(rates) {
   const from = inputCur.value;
   const to = outputCur.value;
-  rateFrom.textContent = `1 ${from} = ${rates[from].toFixed(2)} EUR`;
+  const have = ((1/rates[from]) / (1/rates[to])).toFixed(4)
+  const want = ((1/rates[to]) / (1/rates[from])).toFixed(4)
+  rateFrom.textContent = `1 ${from} = ${have} ${to}`;
+  rateTo.textContent = `1 ${to} = ${want} ${from}`;
 }
