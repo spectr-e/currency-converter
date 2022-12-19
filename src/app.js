@@ -4,7 +4,6 @@ const inputCur = document.querySelector("select#i-have-opt");
 const inputVal = document.querySelector("input#i-have-amt");
 const outputCur = document.querySelector("select#i-want-opt");
 const outputVal = document.querySelector("input#i-want-amt");
-
 const currency = document.querySelectorAll("select");
 
 const requestURL = "https://api.exchangerate.host/latest";
@@ -26,8 +25,9 @@ function currencySelect(rates) {
       option.textContent = curr;
       currency[i].appendChild(option)
     }
-    currency[i].addEventListener('change', ()=>{
+    currency[i].addEventListener('change', (e)=>{
           displayRates(rates);
+          changeFlag(e.target)
     })
   }
 }
@@ -39,4 +39,12 @@ function displayRates(rates) {
   const want = ((1/rates[to]) / (1/rates[from])).toFixed(4)
   rateFrom.textContent = `1 ${from} = ${have} ${to}`;
   rateTo.textContent = `1 ${to} = ${want} ${from}`;
+}
+function changeFlag(target){
+    for (code in country){
+        if (code === target.value){
+            const flag = target.parentElement.querySelector('img')
+            flag.src = `https://flagsapi.com/${country[code]}/flat/64.png`
+        }
+    }
 }
