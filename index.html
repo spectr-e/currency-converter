@@ -23,36 +23,24 @@
             <!-- PART 1 : USER INPUT -->
             <div id="i-have">
               <h3 class="title">I have</h3>
-              <p class="rates">1 GBP = 4.9232 PLN</p>
+              <input id="i-have-amt" type="text" placeholder="0.00" />
               <div class="currency-list">
                 <img src="https://www.countryflagicons.com/FLAT/64/DE.png" alt="" id="flag" />
-                <select class="currency">
-                    <option value="USD">USD</option>
-                    <option value="NPR">NPR</option>
-                    <option value="INR">INR</option>
-                    <option value="PKR">PKR</option>
-                    <option value="KES">KES</option>
+                <select id="i-have-opt" class="currency">
                 </select>
               </div>
-              <input type="text" placeholder="0.00" />
             </div>
             <!-- Exchange Icon -->
             <!-- PART 2: CONVERTED OUTPUT -->
             <div id="i-want">
                 <div class="wrapper">
                     <h3 class="title">I want</h3>
-                    <p class="rates">1 GBP = 4.9232 PLN</p>
+                    <input id="i-want-amt" type="text" placeholder="0.00" />
                     <div class="currency-list">
                       <img src="https://www.countryflagicons.com/FLAT/64/DE.png" alt="" id="flag" />
-                      <select class="currency">
-                          <option value="USD">USD</option>
-                          <option value="NPR">NPR</option>
-                          <option value="INR">INR</option>
-                          <option value="PKR">PKR</option>
-                          <option value="KES">KES</option>
+                      <select id="i-want-opt" class="currency">
                       </select>
                     </div>
-                    <input type="text" placeholder="0.00" />
                 </div>
               <div id="submit">
                   <input id="btn-submit" type="submit" value="Convert"/>
