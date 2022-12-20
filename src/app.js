@@ -5,8 +5,9 @@ const inputVal = document.querySelector("input#i-have-amt");
 const outputCur = document.querySelector("select#i-want-opt");
 const outputVal = document.querySelector("input#i-want-amt");
 const currency = document.querySelectorAll("select");
-
+const form = document.querySelector("form");
 const requestURL = "https://api.exchangerate.host/latest";
+
 fetchFunc();
 function fetchFunc() {
   return fetch(requestURL)
@@ -26,12 +27,16 @@ function currencySelect(rates) {
       currency[i].appendChild(option);
     }
     currency[i].addEventListener("change", (e) => {
+      formReset();
       displayRates(rates);
       changeFlag(e.target);
     });
   }
 }
-
+function formReset() {
+  inputVal.value = "";
+  outputVal.value = "";
+}
 function displayRates(rates) {
   const from = inputCur.value;
   const to = outputCur.value;
@@ -39,6 +44,9 @@ function displayRates(rates) {
   const want = (1 / rates[to] / (1 / rates[from])).toFixed(4);
   rateFrom.textContent = `1 ${from} = ${have} ${to}`;
   rateTo.textContent = `1 ${to} = ${want} ${from}`;
+  inputVal.placeholder = `From - ${from} 0.00`
+  outputVal.placeholder = `Receive - ${to} 0.00`
+  onConvert(have, want);
 }
 function changeFlag(target) {
   for (code in country) {
@@ -47,4 +55,16 @@ function changeFlag(target) {
       flag.src = `https://flagsapi.com/${country[code]}/flat/64.png`;
     }
   }
+}
+function onConvert(have, want) {
+  console.log(form);
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    convert(have, want);
+  });
+}
+function convert(have, want) {
+  const userInp = inputVal.value;
+  const converted = (userInp * have).toFixed(4);
+  outputVal.value = `${converted}`;
 }
